@@ -14,20 +14,20 @@
  * @category  WPS
  * @package   WPS\Options
  * @author    Travis Smith <t@wpsmith.net>
- * @copyright 2018 Travis Smith; 2018 Akamai
+ * @copyright 2018-2019 Travis Smith
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License v2
  * @link      https://github.com/akamai/wp-akamai
  * @since     0.2.0
  */
 
-namespace WPS\Options;
+namespace WPS\WP\Options;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'WPS\Options' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\Options' ) ) {
 	/**
 	 * Class Options
 	 *
@@ -47,7 +47,7 @@ if ( ! class_exists( 'WPS\Options' ) ) {
 		 * @access   protected
 		 * @var      string $plugin_name The string used to uniquely identify this plugin.
 		 */
-		protected static $plugin_name = 'fundraising';
+		protected static $plugin_name = 'plugin';
 
 		/**
 		 * Nonce suffix.
